@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bestelpagina</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -44,33 +44,33 @@
         <form>
             <div class="">
               <label for="exampleInputEmail1" class="form-label"> <strong>maki komkommer</strong> </label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
              
             </div>
             <div class="">
               <label for="exampleInputPassword1" class="form-label"> <strong> maki avocado</strong></label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="number" class="form-control" id="InputNumber">
             </div>
            
             <div class="">
                <label for="exampleInputEmail1" class="form-label"> <strong> nigiri zalm</strong></label>
-               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
             </div>
             <div class="">
                 <label for="exampleInputPassword1" class="form-label"> <strong> philidelphia roll</strong></label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="number" class="form-control" id="InputNumber">
             </div>
                 
             <div class="">
                 <label for="exampleInputEmail1" class="form-label"> <strong>spicy tuna roll</strong></label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
             </div>
             <div class="">
                 <label for="exampleInputPassword1" class="form-label"> <strong> california roll</strong></label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="number" class="form-control" id="InputNumber">
             </div>
             <div class="mt-3">
-                <button type="submit " class="btn btn-dark"><a href="besteloverzicht.html">Bestellen!</a></button>
+                <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="besteloverzicht.php">Bestellen!</a></button>
             </div>
             <form>
             <br>

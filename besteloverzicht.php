@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">home</a>
+                      <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="false">Home</a>
                     </li>
                 <li class="nav-item">
                   <a class="nav-link text-light" href="#">bestellen</a>
@@ -88,5 +88,6 @@
       </div>
     </div>
     </footer>
+</body>
 
 

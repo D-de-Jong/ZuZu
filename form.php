@@ -43,33 +43,33 @@
         <form>
             <div class="">
               <label for="exampleInputEmail1" class="form-label">Voornaam</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="FirstName" class="form-control" id="InputFirstName" aria-describedby="emailHelp">
              
             </div>
                <div class="">
                 <label for="exampleInputPassword1" class="form-label">Achternaam</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="LastName" class="form-control" id="InputLastName">
                </div>
            
                 <div class="">
                   <label for="exampleInputEmail1" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="">
                   <label for="exampleInputPassword1" class="form-label">Adres</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="Address" class="form-control" id="InputAddress">
                 </div>
                 
                 <div class="">
                   <label for="exampleInputEmail1" class="form-label">Postcode</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <input type="Zipcode" class="form-control" id="InputZipcode" aria-describedby="emailHelp">
                 </div>
                 <div class="">
                   <label for="exampleInputPassword1" class="form-label">Woonplaats</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="City" class="form-control" id="InputCity">
                 </div>
                 <div class="mt-3">
-                  <button type="submit " class="btn btn-primary">Submit</button>
+                  <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="bestelpagina.php">Ga verder</a></button>
                 </div>
             <form>
     </div>
