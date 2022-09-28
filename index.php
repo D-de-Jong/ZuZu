@@ -15,17 +15,17 @@
         <div class="row">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand text-light" href="#">ZuZu</a>
+              <a class="navbar-brand text-light" href="#"><img src="img/image (4).png" alt="" style="width: 110px;"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">home</a>
+                        <a class="nav-link text-light" href="index.php" tabindex="-1" aria-disabled="true">Home</a>
                       </li>
                   <li class="nav-item">
-                    <a class="nav-link text-light" href="#">bestellen</a>
+                    <a class="nav-link text-light" href="form.php" tabindex="-1" aria-disabled="true">Bestellen</a>
                   </li>
                 </ul>
               </div>
