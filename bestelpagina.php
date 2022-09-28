@@ -25,7 +25,7 @@
                         <a class="nav-link text-light" href="index.php" tabindex="-1" aria-disabled="true">Home</a>
                       </li>
                   <li class="nav-item">
-                    <a class="nav-link text-light" href="form.php" tabindex="-1" aria-disabled="true">Bestellen</a>
+                    <a class="nav-link text-light" href="bestelpagina.php" tabindex="-1" aria-disabled="true">Bestellen</a>
                   </li>
                 </ul>
               </div>
@@ -70,7 +70,7 @@
                 <input type="number" class="form-control" id="InputNumber">
             </div>
             <div class="mt-3">
-                <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="besteloverzicht.php">Bestellen!</a></button>
+                <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="form.php">Bestellen!</a></button>
             </div>
             <form>
             <br>

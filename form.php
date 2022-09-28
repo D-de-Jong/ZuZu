@@ -25,7 +25,7 @@
                         <a class="nav-link text-light" href="index.php" tabindex="-1" aria-disabled="true">Home</a>
                       </li>
                   <li class="nav-item">
-                    <a class="nav-link text-light" href="form.php" tabindex="-1" aria-disabled="true">Bestellen</a>
+                    <a class="nav-link text-light" href="bestelpagina.php" tabindex="-1" aria-disabled="true">Bestellen</a>
                   </li>
                 </ul>
               </div>
@@ -69,7 +69,7 @@
                   <input type="City" class="form-control" id="InputCity">
                 </div>
                 <div class="mt-3">
-                  <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="bestelpagina.php">Ga verder</a></button>
+                  <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="besteloverzicht.php">Ga verder</a></button>
                 </div>
             <form>
     </div>

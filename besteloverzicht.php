@@ -24,7 +24,7 @@
                         <a class="nav-link text-light" href="index.php" tabindex="-1" aria-disabled="true">Home</a>
                       </li>
                   <li class="nav-item">
-                    <a class="nav-link text-light" href="form.php" tabindex="-1" aria-disabled="true">Bestellen</a>
+                    <a class="nav-link text-light" href="bestelpagina.php" tabindex="-1" aria-disabled="true">Bestellen</a>
                   </li>
                 </ul>
               </div>
@@ -49,7 +49,7 @@
         <div class="card">
         <div class="card-body">
           <h1>klantgegevens<br></h1>
-          <p>zoe willems <br>
+          <p>Duncan de Jong<br>
              teststraat 1 <br>
              9999zz test <br>
              test@gmail.com</p>

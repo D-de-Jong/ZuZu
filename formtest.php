@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZuZu Home</title>
+    <title>Klantgevens</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-</head> 
+</head>
 <body>
     <!-- Navbar -->
     <div class="container-fluid">
@@ -33,47 +33,52 @@
           </nav>
         </div>
     </div>
-    
-    <!-- Header -->
-    <div class="img-bg"></div><br>
-    
-    <!-- Tekst -->
-    <h2 class="container-fluid text-center">
-        Goedemiddag, welkom bij ZuZu
-    </h2>
-    <p class="container-fluid text-center">
-        Wij zijn gespecialiceerd in de japanse keuken.
-    </p>
-    <p class="container-fluid text-center">
-       <i>Het woord "sushi" is afkomstig van "su", wat azijn betekent, en "shi" -- rijst</i> 
-    </p>
-    <p class="container-fluid text-center">
-        <strong>Vandaag dinsdag 23 augustus 2022</strong><br>
-        <strong>Bezorgtijd vanaf nu: 18:00</strong>
-     </p>
- 
-     <!-- Cards -->
-     <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-                <img src="img/sushi1.jpeg" alt="" class="img-fluid center" >
-              <p class="card-text text-center">Bestel bij ons je sushi's</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-                <img src="img/sushi2.jpeg" alt="" class="img-fluid center" >
-              <p class="card-text text-center">Keuze uit verschillende soorten sushi"s</p>
-            </div>
-          </div>
-        </div>
-      </div><br>
 
-      <!-- Footer -->
+  <!-- Header -->
+    <div class="img-bg"></div><br>
+
+    <!--Forms-->
+    <div class="container">
+        <div class=""> <h1>klantgegevens</h1></div>
+        <form method="post" action="verwerk.php">
+            <div class="">
+              <label for="naam" class="form-label">Voornaam</label>
+              <input type="FirstName" class="form-control" id="InputFirstName" aria-describedby="emailHelp">
+            </div>
+
+               <div class="">
+                <label for="Achternaam" class="form-label">Achternaam</label>
+                <input type="LastName" class="form-control" id="InputLastName">
+               </div>
+           
+                <div class="">
+                  <label for="Email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <div class="">
+                  <label for="Address" class="form-label">Adres</label>
+                  <input type="Address" class="form-control" id="InputAddress">
+                </div>
+                
+                <div class="">
+                  <label for="Postcode" class="form-label">Postcode</label>
+                  <input type="Zipcode" class="form-control" id="InputZipcode" aria-describedby="emailHelp">
+                </div>
+
+                <div class="">
+                  <label for="Stad" class="form-label">Woonplaats</label>
+                  <input type="City" class="form-control" id="InputCity">
+                </div>
+                <div class="mt-3">
+                  <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="verwerk.php">Ga verder</a></button>
+                </div>
+            <form>
+    </div>
+    <br>
+
+
+    <!-- Footer -->
       <footer class="container-fluid bg-dark text-light">
         <div class="row">
         <div class="col-6"> 
