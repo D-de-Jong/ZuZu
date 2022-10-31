@@ -47,16 +47,16 @@ session_start();
         <div class="card-body">
             <h3>Uw bestelling</h3>
             <?php
-            echo " " . $_SESSION["maki beef carpaccio kaas"] . "<br>";
-            echo " " . $_SESSION["sushi2"] . "<br>";
-            echo " " . $_SESSION["sushi3"] . "<br>";
-            echo " " . $_SESSION["sushi4"] . "<br>";
-            echo " " . $_SESSION["sushi5"] . "<br>";
-            echo " " . $_SESSION["sushi6"] . "<br>";
-            echo " " . $_SESSION["sushi7"] . "<br>";
-            echo " " . $_SESSION["sushi8"] . "<br>";
-            echo " " . $_SESSION["sushi9"] . "<br>";
-            echo " " . $_SESSION["sushi10"] . "<br>";
+            echo "maki beef carpaccio kaas: " . $_SESSION["sushi1"] . "<br>";
+            echo "maki crispy: " . $_SESSION["sushi2"] . "<br>";
+            echo "maki regenboog: " . $_SESSION["sushi3"] . "<br>";
+            echo "maki crispy garnaal: " . $_SESSION["sushi4"] . "<br>";
+            echo "maki king konbanwa: " . $_SESSION["sushi5"] . "<br>";
+            echo "soft shell kaas mango: " . $_SESSION["sushi6"] . "<br>";
+            echo "maki geflambeerde paling: " . $_SESSION["sushi7"] . "<br>";
+            echo "tokio rol: " . $_SESSION["sushi8"] . "<br>";
+            echo "maki zalmmousse: " . $_SESSION["sushi9"] . "<br>";
+            echo "maki garnaal: " . $_SESSION["sushi10"] . "<br>";
             ?>
         </div>
       </div>
@@ -74,7 +74,7 @@ session_start();
         </div>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br>
 
     <!-- Footer -->
     <footer class="container-fluid bg-dark text-light">

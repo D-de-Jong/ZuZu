@@ -42,62 +42,12 @@ if (isset($_POST['verzenden'])) {
         $_SESSION['sushi8'] = $sushi8;
         $_SESSION['sushi9'] = $sushi9;
         $_SESSION['sushi10'] = $sushi10;
-        header('Location: overview.php');
+        header('Location: besteloverzicht.php');
     }
 }
 else {
     $melding = "Geef aan welke sushi je wilt!";
 }
-
-
-try {
-    $db = new PDO("mysql:host=localhost;dbname=zuzu database",
-        "root", "");
-    if (isset($_POST['verzenden'])) {
-        $sushi1 = filter_input(INPUT_POST, "sushi1",
-            FILTER_SANITIZE_STRING);
-        $sushi2 = filter_input(INPUT_POST, "sushi2",
-            FILTER_SANITIZE_STRING);
-        $sushi3 = filter_input(INPUT_POST, "sushi3",
-            FILTER_SANITIZE_STRING);
-        $sushi4 = filter_input(INPUT_POST, "sushi4",
-            FILTER_SANITIZE_STRING);
-        $sushi5 = filter_input(INPUT_POST, "sushi5",
-            FILTER_SANITIZE_STRING);
-        $sushi6 = filter_input(INPUT_POST, "sushi6",
-            FILTER_SANITIZE_STRING);
-        $sushi7 = filter_input(INPUT_POST, "sushi7",
-            FILTER_SANITIZE_STRING);
-        $sushi8 = filter_input(INPUT_POST, "sushi8",
-            FILTER_SANITIZE_STRING);
-        $sushi9 = filter_input(INPUT_POST, "sushi9",
-            FILTER_SANITIZE_STRING);
-        $sushi10 = filter_input(INPUT_POST, "sushi10",
-            FILTER_SANITIZE_STRING);
-
-
-        $query = $db->prepare ("INSERT INTO `sushi`(`maki beef carpaccio kaas`, `maki crispy`, `maki regenboog`, `maki crispy garnaal`, `maki king konbanwa`, `soft shell kaas mango`, `maki geflambeerde paling`, `tokio rol`, `maki zalmmousse`, `maki garnaal`) VALUES (:maki beef carpaccio kaas, :maki crispy, :maki regenboog, :maki crispy garnaal, :maki king konbanwa, :soft shell kaas mango, :maki geflambeerde paling, :tokio rol, :maki zalmmousse, :maki garnaal)");
-        $query->bindParam("sushi1", $sushi1);
-        $query->bindParam("sushi2", $sushi2);
-        $query->bindParam("sushi3", $sushi3);
-        $query->bindParam("sushi4", $sushi4);
-        $query->bindParam("sushi5", $sushi5);
-        $query->bindParam("sushi6", $sushi6);
-        $query->bindParam("sushi7", $sushi7);
-        $query->bindParam("sushi8", $sushi8);
-        $query->bindParam("sushi9", $sushi9);
-        $query->bindParam("sushi10", $sushi10);
-        if ($query->execute()) {
-            header('Location: besteloverzicht.php');;
-        } else {
-            echo "Er is een fout opgetreden!";
-        }
-        echo "<br>";
-    }
-} catch (PDOException $e) {
-    die("ERROR!: " . $e->getMessage());
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -220,7 +170,7 @@ try {
             </div>
 
             <div class="mt-3">
-                <button class="text-dark"><a style= "text-decoration: none" href="form.php">ga door</a></button>
+             <input type="submit" name="verzenden" value="Ga door"/>
             </div>
             <form>
             <br>
@@ -260,4 +210,3 @@ try {
     </footer>
 </body>
 </html>
-<?php echo $melding; ?>
