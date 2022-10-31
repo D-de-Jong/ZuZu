@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,18 +45,21 @@
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <h1>bestellingen <br></h1>
-          <p>maki komkommer: 2</p>
-          <strong>totaal: $5,00</strong>
+            <?php
+            echo " " . $_SESSION["FirstName"] . "<br>";
+            ?>
         </div>
       </div>
         <div class="card">
         <div class="card-body">
-          <h1>klantgegevens<br></h1>
-          <p>Duncan de Jong<br>
-             teststraat 1 <br>
-             9999zz test <br>
-             test@gmail.com</p>
+            <?php
+            echo " " . $_SESSION["FirstName"] . "<br>";
+            echo "  " . $_SESSION["LastName"] . "<br>";
+            echo "  " . $_SESSION["email"] . "<br>";
+            echo "  " . $_SESSION["Address"] . "<br>";
+            echo "  " . $_SESSION["Zipcode"] . "<br>";
+            echo "  " . $_SESSION["City"] . "<br>";
+            ?>
         </div>
         </div>
     </div>

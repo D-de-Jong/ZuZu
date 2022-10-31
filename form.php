@@ -1,3 +1,17 @@
+<?php
+session_start();
+if (isset($_POST['Submit'])) {
+    $_SESSION['FirstName'] = $_POST['input_FirstName'];
+    $_SESSION['LastName'] = $_POST['input_LastName'];
+    $_SESSION['email'] = $_POST['input_email'];
+    $_SESSION['Address'] = $_POST['input_Address'];
+    $_SESSION['Zipcode'] = $_POST['input_Zipcode'];
+    $_SESSION['City'] = $_POST['input_City'];
+    header('Location: /ZuZu/besteloverzicht.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,36 +54,36 @@
     <!--Forms-->    
     <div class="container">
         <div class=""> <h1>klantgegevens</h1></div>
-        <form>
+        <form method="post">
             <div class="">
               <label for="exampleInputEmail1" class="form-label">Voornaam</label>
-              <input type="FirstName" class="form-control" id="InputFirstName" aria-describedby="emailHelp">
+              <input type="FirstName" name="input_FirstName" class="form-control" id="InputFirstName" aria-describedby="emailHelp">
              
             </div>
                <div class="">
                 <label for="exampleInputPassword1" class="form-label">Achternaam</label>
-                <input type="LastName" class="form-control" id="InputLastName">
+                <input type="LastName" name="input_LastName" class="form-control" id="InputLastName">
                </div>
            
                 <div class="">
                   <label for="exampleInputEmail1" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                  <input type="email" name="input_email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="">
                   <label for="exampleInputPassword1" class="form-label">Adres</label>
-                  <input type="Address" class="form-control" id="InputAddress">
+                  <input type="Address" name="input_Address" class="form-control" id="InputAddress">
                 </div>
                 
                 <div class="">
                   <label for="exampleInputEmail1" class="form-label">Postcode</label>
-                  <input type="Zipcode" class="form-control" id="InputZipcode" aria-describedby="emailHelp">
+                  <input type="Zipcode" name="input_Zipcode" class="form-control" id="InputZipcode" aria-describedby="emailHelp">
                 </div>
                 <div class="">
                   <label for="exampleInputPassword1" class="form-label">Woonplaats</label>
-                  <input type="City" class="form-control" id="InputCity">
+                  <input type="City" name="input_City" class="form-control" id="InputCity">
                 </div>
                 <div class="mt-3">
-                  <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="besteloverzicht.php">Ga verder</a></button>
+                    <p><input type="submit" name="Submit" value="Bestellen!"/></p>
                 </div>
             <form>
     </div>

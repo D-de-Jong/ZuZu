@@ -38,43 +38,94 @@
     <div class="img-bg"></div><br>
 
     <!--Forms-->
-    </div>
     <div class="container">
+      <div class="row">
         <div class=""> <h1>sushi bestellen</h1></div>
         <form>
-            <div class="">
-              <label for="exampleInputEmail1" class="form-label"> <strong>maki komkommer</strong> </label>
-              <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
-             
+            <div class="container">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20beef%20carpaccio%20kaas.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki beef carpaccio kaas</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20crispy.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki crispy</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20regenboog.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki regenboog</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20crispy%20garnaal.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki crispy garnaal</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20king%20konbawa.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki king konbanwa</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/soft%20shell%20kaas%20mango.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>soft shell kaas mango</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20geflambeerde%20paling.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki geflambeerde paling</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/tokio%20rol.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>tokio rol</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20zalmmousse.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki zalmmousse</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <img src="img/maki%20garnaal.webp" style="width: 150px">
+                            <label for="exampleInputEmail1" class="form-label"> <strong>maki garnaal</strong> </label>
+                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="">
-              <label for="exampleInputPassword1" class="form-label"> <strong> maki avocado</strong></label>
-              <input type="number" class="form-control" id="InputNumber">
-            </div>
-           
-            <div class="">
-               <label for="exampleInputEmail1" class="form-label"> <strong> nigiri zalm</strong></label>
-               <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
-            </div>
-            <div class="">
-                <label for="exampleInputPassword1" class="form-label"> <strong> philidelphia roll</strong></label>
-                <input type="number" class="form-control" id="InputNumber">
-            </div>
-                
-            <div class="">
-                <label for="exampleInputEmail1" class="form-label"> <strong>spicy tuna roll</strong></label>
-                <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
-            </div>
-            <div class="">
-                <label for="exampleInputPassword1" class="form-label"> <strong> california roll</strong></label>
-                <input type="number" class="form-control" id="InputNumber">
-            </div>
+
             <div class="mt-3">
                 <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="form.php">Bestellen!</a></button>
             </div>
             <form>
             <br>
     </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="container-fluid bg-dark text-light">
@@ -91,7 +142,7 @@
         </p>
         </div>
 
-      <div class="col-6">
+      <div class="container col-6">
         <p class="text-center"><br>
           <strong class="text-center">Openingstijden</strong>
           <p class="text-center">Maandag: Gesloten<br>

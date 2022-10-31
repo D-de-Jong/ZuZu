@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,8 +51,21 @@
        <i>Het woord "sushi" is afkomstig van "su", wat azijn betekent, en "shi" -- rijst</i> 
     </p>
     <p class="container-fluid text-center">
-        <strong>Vandaag dinsdag 23 augustus 2022</strong><br>
-        <strong>Bezorgtijd vanaf nu: 18:00</strong>
+        <strong>
+            <?php
+                date_default_timezone_set("Europe/Amsterdam");
+                $today = date('j F Y');
+                echo "Het is vandaag ", $today;
+            ?>
+        </strong><br>
+        <strong>
+            <?php
+            date_default_timezone_set("Europe/Amsterdam");
+            $hour = date('H');
+            $minute = date('i');
+            echo "Bezorgtijd vanaf nu: ", $hour+1,":",$minute;
+            ?>
+        </strong>
      </p>
  
      <!-- Cards -->
@@ -57,16 +73,16 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-3">
           <div class="card">
+              <img style="height: 227px" src="img/sushi1.jpeg" alt="" class="img-fluid center" >
             <div class="card-body">
-                <img src="img/sushi1.jpeg" alt="" class="img-fluid center" >
               <p class="card-text text-center">Bestel bij ons je sushi's</p>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card">
+              <img src="img/sushi2.jpeg" alt="" class="img-fluid center" >
             <div class="card-body">
-                <img src="img/sushi2.jpeg" alt="" class="img-fluid center" >
               <p class="card-text text-center">Keuze uit verschillende soorten sushi"s</p>
             </div>
           </div>
