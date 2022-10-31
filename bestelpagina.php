@@ -1,3 +1,69 @@
+<?php
+session_start();
+if (isset($_POST['verzenden'])) {
+    $_SESSION['maki beef carpaccio kaas'] = $_POST['maki beef carpaccio kaas'];
+    $_SESSION['maki crispy'] = $_POST['maki crispy'];
+    $_SESSION['maki regenboog'] = $_POST['maki regenboog'];
+    $_SESSION['maki crispy garnaal'] = $_POST['maki crispy garnaal'];
+    $_SESSION['maki king konbanwa'] = $_POST['maki king konbanwa'];
+    $_SESSION['soft shell kaas mango'] = $_POST['soft shell kaas mango'];
+    $_SESSION['maki geflambeerde paling'] = $_POST['maki geflambeerde paling'];
+    $_SESSION['tokio rol'] = $_POST['tokio rol'];
+    $_SESSION['maki zalmmousse'] = $_POST['maki zalmmousse'];
+    $_SESSION['maki garnaal'] = $_POST['maki garnaal'];
+
+}
+
+
+try {
+    $db = new PDO("mysql:host=localhost;dbname=zuzu database",
+        "root", "");
+    if (isset($_POST['verzenden'])) {
+        $makibeefcarpacciokaas = filter_input(INPUT_POST, "maki beef carpaccio kaas",
+            FILTER_SANITIZE_NUMBER_INT);
+        $makicrispy = filter_input(INPUT_POST, "maki crispy",
+            FILTER_SANITIZE_NUMBER_INT);
+        $smakiregenboog = filter_input(INPUT_POST, "maki regenboog",
+            FILTER_SANITIZE_NUMBER_INT);
+        $makicrispygarnaal = filter_input(INPUT_POST, "maki crispy garnaal",
+            FILTER_SANITIZE_NUMBER_INT);
+        $makikingkonbanwa = filter_input(INPUT_POST, "maki king konbanwa",
+            FILTER_SANITIZE_NUMBER_INT);
+        $softshellkaasmango = filter_input(INPUT_POST, "soft shell kaas mango",
+            FILTER_SANITIZE_NUMBER_INT);
+        $makigeflambeerdepaling = filter_input(INPUT_POST, "maki geflambeerde paling",
+            FILTER_SANITIZE_NUMBER_INT);
+        $tokiorol = filter_input(INPUT_POST, "tokio rol",
+            FILTER_SANITIZE_NUMBER_INT);
+        $makizalmmousse = filter_input(INPUT_POST, "maki zalmmousse",
+            FILTER_SANITIZE_NUMBER_INT);
+        $makigarnaal = filter_input(INPUT_POST, "maki garnaal",
+            FILTER_SANITIZE_NUMBER_INT);
+
+
+        $query = $db->prepare ("INSERT INTO sushi(`maki beef carpaccio kaas`, `maki crispy`, `maki regenboog`, `maki crispy garnaal`, `maki king konbanwa`, `soft shell kaas mango`, `maki geflambeerde paling`, `tokio rol`, `maki zalmmousse`, `maki garnaal`) VALUES (:maki beef carpaccio kaas, :maki crispy, :maki regenboog, :maki crispy garnaal, :maki king konbanwa, :soft shell kaas mango, :maki geflambeerde paling, :tokio rol, :maki zalmmousse, :maki garnaal)");
+        $query->bindParam("maki beef carpaccio kaas", $makibeefcarpacciokaas);
+        $query->bindParam("maki crispy", $makicrispy);
+        $query->bindParam("maki regenboog", $makiregenboog);
+        $query->bindParam("maki crispy garnaal", $makicrispygarnaal);
+        $query->bindParam("maki king konbanwa", $makikingkonbanwa);
+        $query->bindParam("soft shell kaas mango", $softshellkaasmango);
+        $query->bindParam("maki geflambeerde paling", $makigeflambeerdepaling);
+        $query->bindParam("tokio rol", $tokiorol);
+        $query->bindParam("maki zalmmousse", $makizalmmousse);
+        $query->bindParam("maki garnaal", $makigarnaal);
+        if ($query->execute()) {
+            header('Location: besteloverzicht.php');;
+        } else {
+            echo "Er is een fout opgetreden!";
+        }
+        echo "<br>";
+    }
+} catch (PDOException $e) {
+    die("ERROR!: " . $e->getMessage());
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,70 +114,70 @@
                         <div class="p-3">
                             <img src="img/maki%20beef%20carpaccio%20kaas.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki beef carpaccio kaas</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki beef carpaccio kaas" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/maki%20crispy.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki crispy</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki crispy" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/maki%20regenboog.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki regenboog</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki regenboog" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/maki%20crispy%20garnaal.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki crispy garnaal</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki crispy garnaal" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/maki%20king%20konbawa.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki king konbanwa</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki king konbanwa" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/soft%20shell%20kaas%20mango.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>soft shell kaas mango</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="soft shell kaas mango" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/maki%20geflambeerde%20paling.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki geflambeerde paling</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki geflambeerde paling" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/tokio%20rol.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>tokio rol</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="tokio rol" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/maki%20zalmmousse.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki zalmmousse</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki zalmmousse" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="col">
                         <div class="p-3">
                             <img src="img/maki%20garnaal.webp" style="width: 150px">
                             <label for="exampleInputEmail1" class="form-label"> <strong>maki garnaal</strong> </label>
-                            <input type="number" class="form-control" id="InputNumber" aria-describedby="emailHelp">
+                            <input type="number" name="maki garnaal" class="form-control" id="InputNumber" aria-describedby="emailHelp">
                         </div>
                     </div>
 
@@ -119,7 +185,7 @@
             </div>
 
             <div class="mt-3">
-                <button type="submit " class="btn btn-secondary"><a class="text-light" style="text-decoration: none" href="form.php">Bestellen!</a></button>
+                <p><input type="submit" name="verzenden" value="ga door"/></p>
             </div>
             <form>
             <br>

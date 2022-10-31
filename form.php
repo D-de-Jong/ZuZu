@@ -1,14 +1,51 @@
 <?php
 session_start();
-if (isset($_POST['Submit'])) {
-    $_SESSION['FirstName'] = $_POST['input_FirstName'];
-    $_SESSION['LastName'] = $_POST['input_LastName'];
-    $_SESSION['email'] = $_POST['input_email'];
-    $_SESSION['Address'] = $_POST['input_Address'];
-    $_SESSION['Zipcode'] = $_POST['input_Zipcode'];
-    $_SESSION['City'] = $_POST['input_City'];
-    header('Location: /ZuZu/besteloverzicht.php');
+if (isset($_POST['verzenden'])) {
+    $_SESSION['naam'] = $_POST['naam'];
+    $_SESSION['achternaam'] = $_POST['achternaam'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['adres'] = $_POST['adres'];
+    $_SESSION['postcode'] = $_POST['postcode'];
+    $_SESSION['woonplaats'] = $_POST['woonplaats'];
 }
+
+
+try {
+    $db = new PDO("mysql:host=localhost;dbname=zuzu database",
+        "root", "");
+    if (isset($_POST['verzenden'])) {
+        $naam = filter_input(INPUT_POST, "naam",
+            FILTER_SANITIZE_STRING);
+        $achternaam = filter_input(INPUT_POST, "achternaam",
+            FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, "email",
+            FILTER_SANITIZE_STRING);
+        $adres = filter_input(INPUT_POST, "adres",
+            FILTER_SANITIZE_STRING);
+        $postcode = filter_input(INPUT_POST, "postcode",
+            FILTER_SANITIZE_STRING);
+        $woonplaats = filter_input(INPUT_POST, "woonplaats",
+            FILTER_SANITIZE_STRING);
+
+
+        $query = $db->prepare ("INSERT INTO `inlog`(`naam`, `achternaam`, `email`, `adres`, `postcode`, `woonplaats`) VALUES (:naam, :achternaam, :email, :adres, :postcode, :woonplaats)");
+        $query->bindParam("naam", $naam);
+        $query->bindParam("achternaam", $achternaam);
+        $query->bindParam("email", $email);
+        $query->bindParam("adres", $adres);
+        $query->bindParam("postcode", $postcode);
+        $query->bindParam("woonplaats", $woonplaats);
+        if ($query->execute()) {
+            header('Location: besteloverzicht.php');;
+        } else {
+            echo "Er is een fout opgetreden!";
+        }
+        echo "<br>";
+    }
+} catch (PDOException $e) {
+    die("ERROR!: " . $e->getMessage());
+}
+
 ?>
 
 
@@ -57,33 +94,33 @@ if (isset($_POST['Submit'])) {
         <form method="post">
             <div class="">
               <label for="exampleInputEmail1" class="form-label">Voornaam</label>
-              <input type="FirstName" name="input_FirstName" class="form-control" id="InputFirstName" aria-describedby="emailHelp">
+              <input type="FirstName" name="naam" class="form-control" id="InputFirstName" aria-describedby="emailHelp">
              
             </div>
                <div class="">
                 <label for="exampleInputPassword1" class="form-label">Achternaam</label>
-                <input type="LastName" name="input_LastName" class="form-control" id="InputLastName">
+                <input type="LastName" name="achternaam" class="form-control" id="InputLastName">
                </div>
            
                 <div class="">
                   <label for="exampleInputEmail1" class="form-label">Email</label>
-                  <input type="email" name="input_email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                  <input type="email" name="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="">
                   <label for="exampleInputPassword1" class="form-label">Adres</label>
-                  <input type="Address" name="input_Address" class="form-control" id="InputAddress">
+                  <input type="Address" name="adres" class="form-control" id="InputAddress">
                 </div>
                 
                 <div class="">
                   <label for="exampleInputEmail1" class="form-label">Postcode</label>
-                  <input type="Zipcode" name="input_Zipcode" class="form-control" id="InputZipcode" aria-describedby="emailHelp">
+                  <input type="Zipcode" name="postcode" class="form-control" id="InputZipcode" aria-describedby="emailHelp">
                 </div>
                 <div class="">
                   <label for="exampleInputPassword1" class="form-label">Woonplaats</label>
-                  <input type="City" name="input_City" class="form-control" id="InputCity">
+                  <input type="City" name="woonplaats" class="form-control" id="InputCity">
                 </div>
                 <div class="mt-3">
-                    <p><input type="submit" name="Submit" value="Bestellen!"/></p>
+                    <p><input type="submit" name="verzenden" value="Bestellen!"/></p>
                 </div>
             <form>
     </div>

@@ -45,25 +45,36 @@ session_start();
     <div class="container">
       <div class="card">
         <div class="card-body">
+            <h3>Uw bestelling</h3>
             <?php
-            echo " " . $_SESSION["FirstName"] . "<br>";
+            echo " " . $_SESSION["maki beef carpaccio kaas"] . "<br>";
+            echo " " . $_SESSION["sushi2"] . "<br>";
+            echo " " . $_SESSION["sushi3"] . "<br>";
+            echo " " . $_SESSION["sushi4"] . "<br>";
+            echo " " . $_SESSION["sushi5"] . "<br>";
+            echo " " . $_SESSION["sushi6"] . "<br>";
+            echo " " . $_SESSION["sushi7"] . "<br>";
+            echo " " . $_SESSION["sushi8"] . "<br>";
+            echo " " . $_SESSION["sushi9"] . "<br>";
+            echo " " . $_SESSION["sushi10"] . "<br>";
             ?>
         </div>
       </div>
         <div class="card">
         <div class="card-body">
+            <h3>Uw gegevens</h3>
             <?php
-            echo " " . $_SESSION["FirstName"] . "<br>";
-            echo "  " . $_SESSION["LastName"] . "<br>";
+            echo " " . $_SESSION["naam"] . "<br>";
+            echo "  " . $_SESSION["achternaam"] . "<br>";
             echo "  " . $_SESSION["email"] . "<br>";
-            echo "  " . $_SESSION["Address"] . "<br>";
-            echo "  " . $_SESSION["Zipcode"] . "<br>";
-            echo "  " . $_SESSION["City"] . "<br>";
+            echo "  " . $_SESSION["adres"] . "<br>";
+            echo "  " . $_SESSION["postcode"] . "<br>";
+            echo "  " . $_SESSION["woonplaats"] . "<br>";
             ?>
         </div>
         </div>
     </div>
-    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <!-- Footer -->
     <footer class="container-fluid bg-dark text-light">
