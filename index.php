@@ -42,7 +42,7 @@
     
     <!-- Tekst -->
     <h2 class="container-fluid text-center">
-        Goedemiddag, welkom bij ZuZu
+        Goedemorgen, welkom bij ZuZu
     </h2>
     <p class="container-fluid text-center">
         Wij zijn gespecialiceerd in de japanse keuken.
